@@ -73,7 +73,33 @@ const restaurantData = [
         is_gluten_free: true,
     },
 
-    
+    {
+        restaurant_name: 'Applebee\'s',
+        is_vegetarian: true,
+        is_vegan: true,
+        is_gluten_free: true,
+    },
+
+    {
+        restaurant_name: 'Red Robin',
+        is_vegetarian: true,
+        is_vegan: true,
+        is_gluten_free: true,
+    },
+
+    {
+        restaurant_name: 'Olive Garden',
+        is_vegetarian: true,
+        is_vegan: true,
+        is_gluten_free: false,
+    },
+
+    {
+        restaurant_name: 'Shari\'s',
+        is_vegetarian: true,
+        is_vegan: false,
+        is_gluten_free: false,
+    },
 ];
 
 const seedRestaurant = () => Restaurant.bulkCreate(restaurantData);
