@@ -1,3 +1,4 @@
+const { Model } = require('sequelize');
 const { Restaurant } = require('../models');
 
 const restaurantData = [
@@ -103,3 +104,5 @@ const restaurantData = [
 ];
 
 const seedRestaurant = () => Restaurant.bulkCreate(restaurantData);
+
+module.exports = seedRestaurant
