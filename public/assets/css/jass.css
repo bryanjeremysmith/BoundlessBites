@@ -1252,8 +1252,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: -15px;
-    margin-right: -15px;
+    width: 100%;
+    justify-content: center;
   }
   
   [class*='col-'] {
