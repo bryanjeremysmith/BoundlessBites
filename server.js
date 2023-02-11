@@ -5,6 +5,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const authRouter = require('./controllers/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,6 +30,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public/assets')));
 
 app.use(routes);
+
+app.use('/', authRouter);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
