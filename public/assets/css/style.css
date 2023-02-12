@@ -1,3 +1,24 @@
+:root {
+  --primary: #3d5852;
+  --secondary: #86938f;
+  --tertiary: #5e877f;
+  --quatrinary: #6c6b67;
+  --light: #e3e4e3;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1);
+  --border-radius: 0.3rem;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  background-color: var(--quatrinary);
+}
+
 .card {
     display: inline-block;
     width: 200px;
@@ -18,63 +39,31 @@
   margin: 20px 0;
 }
 
-/*:root{
-
-}*/
-
 ul {
     list-style-type: none;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Oswald', sans-serif;
 }
 
-/* Add a black background color to the top navigation */
+/* Adds background color to the top navigation */
 .topnav {
-    background-color: black;
+    background-color: var(--secondary);
     overflow: hidden;
   }
 
     /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: white;
+    color: var(--light);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
   }
 
-  
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: rgb(119, 189, 132);
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: rgb(119, 189, 132);
-    color: white;
-  }
-  
-:root {
-    --primary: #3d5852;
-    --secondary: #86938f;
-    --tertiary: #5e877f;
-    --quatrinary: #6c6b67;
-    --light: #e3e4e3;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    --border-radius: 0.3rem;
-  }
-  
-  body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--primary);
+    color: var(--secondary);
   }
   
   a {
@@ -87,6 +76,7 @@ ul {
   }
   
   header {
+    font-family: 'Love Ya Like A Sister', cursive;
     padding: 40px;
     text-align: center;
     background: var(--primary);
@@ -220,3 +210,29 @@ ul {
     align-content: flex-start;
     align-items: center;
   }
+
+  /*DISCLAIMER*/
+  #disclaimer {
+    font-family: 'Oswald', sans-serif;
+    color: var(--secondary);
+    flex: 4;
+    background-color: var(--primary);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #disclaimer-container {
+    background-color: var(--primary);
+    font-family: 'Oswald', sans-serif;
+    color: var(--secondary);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+  font-size: 36px;
+}
+  
