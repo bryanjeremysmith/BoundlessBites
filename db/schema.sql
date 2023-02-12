@@ -1,5 +1,7 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS boundlessBites_db;
+DROP DATABASE IF EXISTS boundlessbites_db;
 
 -- CREATE DATABASE
-CREATE DATABASE boundlessBites_db;
+CREATE DATABASE boundlessbites_db;
+
+USE boundlessbites_db;
