@@ -6,6 +6,8 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const authRouter = require('./controllers/auth');
+const passport = require('passport');
+const SQLiteStore = require('connect-sqlite3')(session);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -20,6 +22,7 @@ const sess = {
     logged_in: false,
 };
 
+
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
@@ -28,6 +31,14 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public/assets')));
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false,
+  store: new SQLiteStore({ db: 'sessions.db', dir: './db' })
+}));
+app.use(passport.authenticate('session'));
 
 app.use(routes);
 
