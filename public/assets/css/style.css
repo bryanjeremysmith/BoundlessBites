@@ -220,3 +220,34 @@ ul {
     align-content: flex-start;
     align-items: center;
   }
+/* scrollbar styling */
+  .scrollable-container {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin-left: 700px;
+    align-items: ;
+  }
+  /*item for scrollbar*/
+  .item {
+    padding: 10px;
+  }
+/* styling for plus button */
+  button {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 10px 20px;
+    transition: background-color 0.5s ease;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  .textbox {
+    display: none;
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+  }

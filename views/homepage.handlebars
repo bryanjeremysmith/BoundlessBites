@@ -1,82 +1,77 @@
-    <!-- Image cards for restaurants -->
-    <div class="cards-container">
-      {{"restaurants images 1"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
 
-    <div class="cards-container">
-      {{"restaurants images 2"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
 
-    <div class="cards-container">
-      {{"restaurants images 3"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+ <!-- Image cards for restaurants -->
 
-    <div class="cards-container">
-      {{"restaurants images 4"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+   {{!-- <ul>{{#each restaurants}}<li> {{restaurant_name}}
+    {{#if is_vegetarian}}
+    
+    {{else}}
+  
+    {{/if}}
 
-    <div class="cards-container">
-      {{"restaurants images 5"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
 
-    <div class="cards-container">
-      {{"restaurants images 6"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+   </li>{{/each}}</ul> --}}
+      <div class="cards-container">
+       
+      
+      <button id="comment-button">+</button>
+          <div class="textbox" id="comment-textbox">
+            <textarea rows="5" cols="50"></textarea>
+            <br><br>
+            <button>Submit</button>
+          </div>
 
-    <div class="cards-container 7">
-      {{"restaurants images"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
-
-    <div class="cards-container 8">
-      {{"restaurants images"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
 
     <!-- Scrollable containers with checkboxes -->
     <div id="diet-checkboxes" class="scrollable-container">
-      {{""}}
-        <div>
-          <input type="checkbox" />
-          {{this}}
-        </div>
-      {{""}}
+      <ul>
+        {{#each restaurants}}
+        <li>{{restaurant_name}}
+          {{#if is_vegetarian}}
+    
+          {{else}}
+        
+          {{/if}}
+
+          {{#if is_vegan}}
+    
+          {{else}}
+        
+          {{/if}}
+
+          {{#if is_glutenfree}}
+    
+          {{else}}
+        
+          {{/if}}
+
+          {{#if is_vegetarian}}
+    
+          {{else}}
+        
+          {{/if}}
+
+        </li>
+        {{/each}}
+      </ul>
+      <input class="checkbox">
     </div>
+
     <div id="allergy-checkboxes" class="scrollable-container">
-      {{#each items}}
-        <div>
-          <input type="checkbox" />
-          {{this}}
-        </div>
-      {{/each}}
+        <ul>
+        {{#each items}}
+        {{!-- {{#each items as |item|}}
+        {{item}} --}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <input class="checkbox">
     </div>
+
+
+ {{!-- <!-- Image cards for restaurants -->
+    {{#each restaurants as |restaurant|}}
+      <div class="cards-container">
+        <h2>{{{ restaurant.restaurant_name }}}</h2>
+      </div>
+    {{/each}} --}}
