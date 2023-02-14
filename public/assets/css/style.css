@@ -239,16 +239,41 @@ p {
   
 
 /* scrollbar styling */
-  .scrollable-container {
-    height: 200px;
+  .scrollable-container1 {
+    
+    min-height: 200px;
+    min-width: 200px;
     overflow-y: scroll;
     border: 1px solid black;
-    margin-left: 700px;
-    align-items: ;
+    margin-left: 1000px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+  }
+
+  .scrollable-container2 {
+    min-height: 200px;
+    min-width: 200px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin-left: 1000px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+  }
+
+  .checkbox-label {
+    display: in;
   }
   /*item for scrollbar*/
   .item {
     padding: 10px;
+  }
+
+  input {
+    flex: none;
   }
 /* styling for plus button */
   button {

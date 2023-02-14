@@ -1,107 +1,50 @@
 
 
- <!-- Image cards for restaurants -->
-
-   {{!-- <ul>{{#each restaurants}}<li> {{restaurant_name}}
-    {{#if is_vegetarian}}
-    
-    {{else}}
+    {{!-- Srollable Container for dietary restrictions --}}
+<div id="diet-checkboxes" class="scrollable-container1">
+  <h6>Dietary Restrictions</h6>
+  <input type="checkbox" id="is_vegetarian">
+  <label for="is_vegetarian">Vegetarian</label><br>
   
-    {{/if}}
+  <input type="checkbox" id="is_vegan">
+  <label for="is_vegan">Vegan</label><br>
+  
+  <input type="checkbox" id="is_gluten_free">
+  <label for="is_gluten_free">Gluten-Free</label><br>
+  
+  <input type="checkbox" id="is_kosher">
+  <label for="is_kosher">Kosher</label><br>
+  
+  <input type="checkbox" id="is_halal">
+  <label for="is_halal">Halal</label><br>
+  
+  <input type="checkbox" id="is_lowsodium">
+  <label for="is_lowsodium">Low Sodium</label><br>
+  
+  <input type="checkbox" id="is_pescatarian">
+  <label for="is_pescatarian">Pescatarian</label><br>
+</div>
 
+{{!-- Srollable Container for allergies --}}
+    <div id="allergy-checkboxes" class="scrollable-container2">
+      <h6>Allergy Restrictions</h6>
 
-   </li>{{/each}}</ul> --}}
-      <div class="cards-container">
-       
+      <input type="checkbox" id="is_shellfish">
+      <label for="is_shellfish">Shellfish</label><br>
       
-      <button id="comment-button">+</button>
-          <div class="textbox" id="comment-textbox">
-            <textarea rows="5" cols="50"></textarea>
-            <br><br>
-            <button>Submit</button>
-          </div>
+      <input type="checkbox" id="is_tree_nuts">
+      <label for="is_tree_nuts">Tree nuts</label><br>
+      
+      <input type="checkbox" id="is_dairy_free">
+      <label for="is_dairy_free">Dairy Free</label><br>
 
+      <input type="checkbox" id="is_seeds">
+      <label for="is_seeds">Seeds</label><br>
+      
+      <input type="checkbox" id="is_honey">
+      <label for="is_honey">Honey</label><br>
+      
+      <input type="checkbox" id="is_garlic_onion">
+      <label for="is_garlic_onion">Garlic/Onion<label><br>
 
-    <!-- Scrollable containers with checkboxes -->
-    <fieldset  id="diet-checkboxes" class="scrollable-container"></fieldset>
-      <legend>Dietary Restrictions</legend>
-
-      <ul>
-        
-        {{#each restaurants}} 
-       <li>{{restaurant_name}} 
-          
-          {{#if is_vegetarian}}
-          <input type="checkbox" id="is_vegetarian">
-          <label for="is_vegetarian">Vegetarian</label>
-
-          <input type="checkbox" id="is_vegan">
-          <label for="is_vegan">Vegan</label>
-
-           <input type="checkbox" id="is_kosher">
-          <label for="is_kosher">Kosher</label>
-
-          <input type="checkbox" id="is_glutenfree">
-          <label for="is_glutenfree">Glutenfree</label>
-
-           <input type="checkbox" id="is_halal">
-          <label for="is_halal">Halal</label>
-
-          <input type="checkbox" id="is_lowsodium">
-          <label for="is_lowsodium">Low Sodium</label>
-
-           <input type="checkbox" id="is_pescatarian">
-          <label for="is_pescatarian">Pescatarian</label>
-          
-
-
-
-
-
-
-          {{else}}
-        
-          {{/if}} 
-
-          {{#if is_vegan}}
-    
-         {{else}}
-        
-          {{/if}}
-
-          {{#if is_glutenfree}}
-    
-           {{else}} 
-        
-          {{/if}}
-
-          {{#if is_vegetarian}}
-    
-          {{else}}
-        
-          {{/if}} 
-
-        </li>
-        {{/each}}
-      </ul>
-      <input class="checkbox">
     </div>
-
-    <div id="allergy-checkboxes" class="scrollable-container">
-        <ul>
-        {{#each items}}
-        {{!-- {{#each items as |item|}}
-        {{item}} --}}
-        <li>{{this}}</li>
-        {{/each}}
-      </ul>
-      <input class="checkbox">
-    </div>
-
-
- {{!-- <!-- Image cards for restaurants -->
-    {{#each restaurants as |restaurant|}}
-      <div class="cards-container">
-        <h2>{{{ restaurant.restaurant_name }}}</h2>
-      </div>
-    {{/each}} --}}
