@@ -24,7 +24,7 @@ router.get("/login", (req, res) => {
   res.render("login", { layout: "main" });
 });
 
-router.post('/'), async (req, res) => {
+router.post('/api/users'), async (req, res) => {
   console.log("here i am")
   try {
     const dbUserData = await User.create({
