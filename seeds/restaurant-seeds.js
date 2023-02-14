@@ -8,13 +8,21 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
+        is_kosher: true,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
-        restaurant_name: 'New Cascadia Tradtitional',
+        restaurant_name: 'New Cascadia Traditional',
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -22,6 +30,10 @@ const restaurantData = [
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
+        is_kosher: true,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -29,6 +41,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: false,
+        is_kosher: true,
+        is_halal: true,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -36,6 +52,10 @@ const restaurantData = [
         is_vegetarian: true, 
         is_vegan: true,
         is_gluten_free: false,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -43,6 +63,10 @@ const restaurantData = [
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -50,6 +74,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: true,
     },
 
     {
@@ -57,6 +85,10 @@ const restaurantData = [
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
+        is_kosher: true,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: true,
     },
 
     {
@@ -64,6 +96,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
+        is_kosher: true,
+        is_halal: true,
+        is_lowsodium: true,
+        is_pescatarian: true,
     },
 
     {
@@ -71,6 +107,10 @@ const restaurantData = [
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
+        is_kosher: true,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -78,6 +118,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: true,
     },
 
     {
@@ -85,6 +129,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: true,
     },
 
     {
@@ -92,6 +140,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: false,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 
     {
@@ -99,6 +151,10 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: false,
         is_gluten_free: false,
+        is_kosher: false,
+        is_halal: false,
+        is_lowsodium: true,
+        is_pescatarian: false,
     },
 ];
 
