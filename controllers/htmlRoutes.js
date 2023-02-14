@@ -1,6 +1,8 @@
 const express = require("express");
 const Restaurant = require("../models/Restaurant");
+const User = require("../models/User")
 const router = express.Router();
+const bcrypt = require('bcrypt')
 
 
 router.get("/", (req, res) => {
@@ -24,7 +26,7 @@ router.get("/login", (req, res) => {
   res.render("login", { layout: "main" });
 });
 
-router.post('/api/users'), async (req, res) => {
+router.post('/api/users', async (req, res) => {
   console.log("here i am")
   try {
     const dbUserData = await User.create({
@@ -42,6 +44,6 @@ router.post('/api/users'), async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
-}
+});
 
 module.exports = router;
