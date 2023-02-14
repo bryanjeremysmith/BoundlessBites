@@ -7,7 +7,9 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const authRouter = require('./controllers/auth');
 const passport = require('passport');
-const SQLiteStore = require('connect-sqlite3')(session);
+//const SQLiteStore = require('connect-sqlite3')(session);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+//const sequelize = require('./config/connection'); // replace with your Sequelize instance
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -32,11 +34,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public/assets')));
 
+
+
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false,
-  store: new SQLiteStore({ db: 'sessions.db', dir: './db' })
+  store: new SequelizeStore({
+    db: sequelize,
+    table: 'User', // replace with the name of your session table
+  }),
 }));
 app.use(passport.authenticate('session'));
 

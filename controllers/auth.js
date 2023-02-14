@@ -32,7 +32,7 @@ passport.deserializeUser(function(user, cb) {
   });
 });
 
-router.get('/login', function (req, res, next) {
+router.get('/login', function (req, res) {
   res.render('login');
 });
 
