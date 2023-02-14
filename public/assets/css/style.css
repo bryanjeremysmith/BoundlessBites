@@ -33,6 +33,13 @@ body {
   height: 200px;
 }
 
+
+.scrollable-container {
+  height: 200px;
+  overflow-y: scroll;
+  margin: 20px 0;
+}
+
 ul {
     list-style-type: none;
     font-family: 'Oswald', sans-serif;
@@ -289,3 +296,20 @@ p {
     height: 200px;
     border: 2px solid black;
   }
+
+  #idContainer
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#idImage
+{
+  border: solid black;
+  min-width: 440px;
+  min-height: 240px;
+  max-width: 440px;
+  max-height: 240px;
+}
+
