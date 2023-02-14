@@ -2,7 +2,7 @@
   --primary: #3d5852;
   --secondary: #86938f;
   --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
+  --quatrinary: white;
   --light: #e3e4e3;
   --dark: #182c23;
   --error: rgb(228, 46, 1);
@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 200px;
 }
+
 
 .scrollable-container {
   height: 200px;
@@ -240,28 +241,29 @@ p {
 
 /* scrollbar styling */
   .scrollable-container1 {
-    
-    min-height: 200px;
-    min-width: 200px;
+    height: 200px;
+    width: 200px;
     overflow-y: scroll;
     border: 1px solid black;
-    margin-left: 1000px;
+    margin-left: auto;
     flex-direction: column;
     display: flex;
-    align-items: center;
     display: inline-block;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   .scrollable-container2 {
-    min-height: 200px;
-    min-width: 200px;
+    height: 200px;
+    width: 200px;
     overflow-y: scroll;
     border: 1px solid black;
-    margin-left: 1000px;
+    margin-left: 1000;
     flex-direction: column;
     display: flex;
-    align-items: center;
     display: inline-block;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   .checkbox-label {
@@ -310,3 +312,4 @@ p {
   max-width: 440px;
   max-height: 240px;
 }
+
