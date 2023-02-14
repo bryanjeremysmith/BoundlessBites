@@ -4,6 +4,8 @@ const sequelize = require('../config/connection.js');
 
 class User extends Model {}
 
+const bcrypt = require('bcrypt')
+
 User.init({
     //columns
     id: {
