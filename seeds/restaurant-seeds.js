@@ -8,7 +8,6 @@ const restaurantData = [
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
-
     },
 
     {
@@ -47,7 +46,7 @@ const restaurantData = [
     },
 
     {
-        restaurant_name: 'Harlowe',
+        restaurant_name: 'Harlow',
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
@@ -61,7 +60,7 @@ const restaurantData = [
     },
 
     {
-        restaurant_name: 'Urdeneta',
+        restaurant_name: 'Urdaneta',
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
