@@ -1,6 +1,26 @@
-<p>id: {{id}} <br>
-    name: {{name}} <br>
-    vegetarian: {{vegetarian}} <br>
-    vegan: {{vegan}} <br>
-    gluten free: {{gf}} <br>
-</p>
+<div id="idContainer">
+    <h1>{{name}}</h1>
+
+    {{!-- change to data source image --}}
+    <img id="idImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFMobxsFiZnzuTTQXh-R6MBxFTZ9jt7X42A&usqp=CAU" alt="Resturant image">
+
+    <div style="padding-top: 20px;">
+        {{#if vegetarian}}
+            <h5 style="color: green;">Vegetarian</h5>
+            {{else}}
+            <h5 style="color: red;">No vegetarian options</h5>
+        {{/if}}
+
+        {{#if vegan}}
+            <h5 style="color: green;">Vegan</h5>
+            {{else}}
+            <h5 style="color: red;">No vegan options</h5>
+        {{/if}}
+
+        {{#if gf}}
+            <h5 style="color: green;">Gluten Free</h5>
+            {{else}}
+            <h5 style="color: red;">No gluten free options</h5>
+        {{/if}}
+    </div>
+</div>

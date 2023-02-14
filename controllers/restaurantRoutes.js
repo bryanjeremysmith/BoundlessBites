@@ -2,10 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Restaurant = require('../models/Restaurant')
 
-router.get('/', (req, res) => {
-    res.render('restaurant', {layout: 'main'});
-});
-
 router.get('/:id', async (req, res) => {
 try {
     const restaurantData = await Restaurant.findByPk(req.params.id);
@@ -18,7 +14,6 @@ try {
     // Cant use {layout: 'main'} and pass in varaibles?
     res.render('restaurant', {
         //passing in variables
-        id: restaurantData.id,
         name: restaurantData.restaurant_name,
         vegetarian: restaurantData.is_vegetarian,
         vegan: restaurantData.is_vegan,
@@ -31,3 +26,4 @@ try {
 });
 
 module.exports = router;
+
