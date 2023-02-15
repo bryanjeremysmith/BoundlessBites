@@ -1,82 +1,50 @@
-    <!-- Image cards for restaurants -->
-    <div class="cards-container">
-      {{"restaurants images 1"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
 
-    <div class="cards-container">
-      {{"restaurants images 2"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
 
-    <div class="cards-container">
-      {{"restaurants images 3"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+    {{!-- Srollable Container for dietary restrictions --}}
+<div id="diet-checkboxes" class="scrollable-container1">
+  <h6>Dietary Restrictions</h6>
+  <input type="checkbox" id="is_vegetarian">
+  <label for="is_vegetarian">Vegetarian</label><br>
+  
+  <input type="checkbox" id="is_vegan">
+  <label for="is_vegan">Vegan</label><br>
+  
+  <input type="checkbox" id="is_gluten_free">
+  <label for="is_gluten_free">Gluten-Free</label><br>
+  
+  <input type="checkbox" id="is_kosher">
+  <label for="is_kosher">Kosher</label><br>
+  
+  <input type="checkbox" id="is_halal">
+  <label for="is_halal">Halal</label><br>
+  
+  <input type="checkbox" id="is_lowsodium">
+  <label for="is_lowsodium">Low Sodium</label><br>
+  
+  <input type="checkbox" id="is_pescatarian">
+  <label for="is_pescatarian">Pescatarian</label><br>
 
-    <div class="cards-container">
-      {{"restaurants images 4"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+</div>
+{{!-- Srollable Container for allergies --}}
+    {{!-- <div id="allergy-checkboxes" class="scrollable-container2">
+      <h6>Allergy Restrictions</h6>
 
-    <div class="cards-container">
-      {{"restaurants images 5"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+      <input type="checkbox" id="is_shellfish">
+      <label for="is_shellfish">Shellfish</label><br>
+      
+      <input type="checkbox" id="is_tree_nuts">
+      <label for="is_tree_nuts">Tree nuts</label><br>
+      
+      <input type="checkbox" id="is_dairy_free">
+      <label for="is_dairy_free">Dairy Free</label><br>
 
-    <div class="cards-container">
-      {{"restaurants images 6"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
+      <input type="checkbox" id="is_seeds">
+      <label for="is_seeds">Seeds</label><br>
+      
+      <input type="checkbox" id="is_honey">
+      <label for="is_honey">Honey</label><br>
+      
+      <input type="checkbox" id="is_garlic_onion">
+      <label for="is_garlic_onion">Garlic/Onion<label><br>
 
-    <div class="cards-container 7">
-      {{"restaurants images"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
-
-    <div class="cards-container 8">
-      {{"restaurants images"}}
-        <div class="card">
-          <img class="card-image" src="{{this}}" />
-        </div>
-      {{!-- {{/each}} --}}
-    </div>
-
-    <!-- Scrollable containers with checkboxes -->
-    <div id="diet-checkboxes" class="scrollable-container">
-      {{""}}
-        <div>
-          <input type="checkbox" />
-          {{this}}
-        </div>
-      {{""}}
-    </div>
-    <div id="allergy-checkboxes" class="scrollable-container">
-      {{#each items}}
-        <div>
-          <input type="checkbox" />
-          {{this}}
-        </div>
-      {{/each}}
-    </div>
+    </div> --}}
