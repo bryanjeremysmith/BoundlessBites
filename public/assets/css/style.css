@@ -2,7 +2,7 @@
   --primary: #3d5852;
   --secondary: #86938f;
   --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
+  --quatrinary: white;
   --light: #e3e4e3;
   --dark: #182c23;
   --error: rgb(228, 46, 1);
@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 200px;
 }
+
 
 .scrollable-container {
   height: 200px;
@@ -236,16 +237,42 @@ ul {
   
 
 /* scrollbar styling */
-  .scrollable-container {
+  .scrollable-container1 {
     height: 200px;
+    width: 200px;
     overflow-y: scroll;
     border: 1px solid black;
-    margin-left: 700px;
-    align-items: ;
+    margin-left: auto;
+    flex-direction: column;
+    display: flex;
+    display: inline-block;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .scrollable-container2 {
+    height: 200px;
+    width: 200px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin-left: 1000;
+    flex-direction: column;
+    display: flex;
+    display: inline-block;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .checkbox-label {
+    display: in;
   }
   /*item for scrollbar*/
   .item {
     padding: 10px;
+  }
+
+  input {
+    flex: none;
   }
 /* styling for plus button */
   button {
@@ -282,3 +309,4 @@ ul {
   max-width: 440px;
   max-height: 240px;
 }
+
