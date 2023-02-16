@@ -17,7 +17,8 @@ try {
         name: restaurantData.restaurant_name,
         vegetarian: restaurantData.is_vegetarian,
         vegan: restaurantData.is_vegan,
-        gf: restaurantData.is_gluten_free
+        gf: restaurantData.is_gluten_free,
+        image: restaurantData.image_src
     });
 
     } catch (err) {

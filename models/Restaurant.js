@@ -32,6 +32,11 @@ Restaurant.init({
         allowNull: false,
     },
 
+    image_src: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
 },
 
 {
