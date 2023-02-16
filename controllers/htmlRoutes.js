@@ -30,8 +30,6 @@ router.get("/disclaimer", (req, res) => {
   res.render("disclaimer", { layout: "main" });
 });
 
-module.exports = router;
-
 router.post('/api/users', async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -97,10 +95,6 @@ router.post('/api/users/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
-});
-
-router.get("/disclaimer", (req, res) => {
-  res.render("disclaimer", { layout: "main" });
 });
 
 module.exports = router;
