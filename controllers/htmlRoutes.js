@@ -7,27 +7,27 @@ const bcrypt = require('bcrypt')
 
 router.get("/", (req, res) => {
 
-Restaurant.findAll().then(results => {
-    //console.log(results);
-    const restaurants = results.map(result => result.get({plain:true}))
-    //console.log(restaurants);
-    res.render("homepage", {
-        restaurants: restaurants
-    });
-})
+  Restaurant.findAll().then(results => {
+      //console.log(results);
+      const restaurants = results.map(result => result.get({plain:true}))
+      //console.log(restaurants);
+      res.render("homepage", {
+          restaurants: restaurants, logged_in : req.session.logged_in
+      });
+  })
   
 });
 
 router.get("/signup", (req, res) => {
-  res.render("signup", { layout: "main" });
+  res.render("signup", { layout: "main", logged_in : req.session.logged_in });
 });
 
 router.get("/login", (req, res) => {
-  res.render("login", { layout: "main" });
+  res.render("login", { layout: "main", logged_in : req.session.logged_in });
 });
 
 router.get("/disclaimer", (req, res) => {
-  res.render("disclaimer", { layout: "main" });
+  res.render("disclaimer", { layout: "main", logged_in : req.session.logged_in });
 });
 
 router.post('/api/users', async (req, res) => {
@@ -39,7 +39,9 @@ router.post('/api/users', async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
+
+      res.render("homepage", { layout: "main", logged_in : req.session.logged_in});
 
       res.status(200).json(dbUserData);
     });
@@ -74,7 +76,9 @@ router.post('/api/users/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
+
+      res.render("homepage", { layout: "main", logged_in : req.session.logged_in});
 
       res
         .status(200)
@@ -88,8 +92,9 @@ router.post('/api/users/login', async (req, res) => {
 
 // Logout
 router.post('/api/users/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
+      res.render("homepage", { layout: "main", logged_in : false});
       res.status(204).end();
     });
   } else {
