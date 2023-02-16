@@ -26,6 +26,10 @@ router.get("/login", (req, res) => {
   res.render("login", { layout: "main" });
 });
 
+router.get("/disclaimer", (req, res) => {
+  res.render("disclaimer", { layout: "main" });
+});
+
 router.post('/api/users', async (req, res) => {
   try {
     const dbUserData = await User.create({

@@ -214,29 +214,26 @@ ul {
 
 
   /*DISCLAIMER*/
-  #disclaimer {
-    font-family: 'Oswald', sans-serif;
-    color: var(--secondary);
-    flex: 4;
-    background-color: var(--primary);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
   #disclaimer-container {
-    background-color: var(--primary);
+    background-color: #577a7c;
     font-family: 'Oswald', sans-serif;
-    color: var(--secondary);
+    color: #e3e4e3;
+    flex: 4;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: double;
+    border-width: thick;
 }
 
-p {
-  font-size: 36px;
+.disclaimer-paragraph {
+  font-size: 28px;
 }
+ 
   
 
 /* scrollbar styling */
