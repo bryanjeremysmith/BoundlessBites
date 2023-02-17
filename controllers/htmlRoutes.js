@@ -15,26 +15,25 @@ router.get('/', async (req, res) => {
     }
       
     res.render('homepage', {
-      restaurants,
+      restaurants, logged_in : req.session.logged_in
     });
   
-    } catch (err) {
+  } catch (err) {
       res.status(500).json(err);
-    }
+  }
 });
-  
 
 
 router.get("/signup", (req, res) => {
-  res.render("signup", { layout: "main" });
+  res.render("signup", { layout: "main", logged_in : req.session.logged_in });
 });
 
 router.get("/login", (req, res) => {
-  res.render("login", { layout: "main" });
+  res.render("login", { layout: "main", logged_in : req.session.logged_in });
 });
 
 router.get("/disclaimer", (req, res) => {
-  res.render("disclaimer", { layout: "main" });
+  res.render("disclaimer", { layout: "main", logged_in : req.session.logged_in });
 });
 
 router.post('/api/users', async (req, res) => {
@@ -46,9 +45,9 @@ router.post('/api/users', async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
 
-      res.status(200).json(dbUserData);
+      res.render("homepage", { layout: "main", logged_in : req.session.logged_in});
     });
   } catch (err) {
     console.log(err);
@@ -81,11 +80,9 @@ router.post('/api/users/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
 
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+      res.render("homepage", { layout: "main", logged_in : req.session.logged_in});
     });
   } catch (err) {
     console.log(err);
@@ -95,9 +92,9 @@ router.post('/api/users/login', async (req, res) => {
 
 // Logout
 router.post('/api/users/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.status(204).end();
+      res.render("homepage", { layout: "main", logged_in : false});
     });
   } else {
     res.status(404).end();
