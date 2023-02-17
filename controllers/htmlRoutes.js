@@ -4,19 +4,26 @@ const User = require("../models/User")
 const router = express.Router();
 const bcrypt = require('bcrypt')
 
-
-router.get("/", (req, res) => {
-
-Restaurant.findAll().then(results => {
-    //console.log(results);
-    const restaurants = results.map(result => result.get({plain:true}))
-    //console.log(restaurants);
-    res.render("homepage", {
-        restaurants: restaurants
+router.get('/', async (req, res) => {
+  try {
+    const restaurantData = await Restaurant.findAll()
+    const restaurants = restaurantData.map((project) => project.get({ plain: true}));
+      
+    if (!restaurantData) {
+      res.status(404).json({ message: 'Cant find restaurant data' });
+      return;
+    }
+      
+    res.render('homepage', {
+      restaurants,
     });
-})
   
+    } catch (err) {
+      res.status(500).json(err);
+    }
 });
+  
+
 
 router.get("/signup", (req, res) => {
   res.render("signup", { layout: "main" });

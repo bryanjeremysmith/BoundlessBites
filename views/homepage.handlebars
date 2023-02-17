@@ -1,6 +1,14 @@
 
+{{#each restaurants as |restaurant| }}
+  {{#if restaurant.is_gluten_free}}
+    <div>
+      <h2>{{restaurant.id}}</h2>
+      <p> cheese</p>
+    </div>
+  {{/if}}
+{{/each}}
 
-    {{!-- Srollable Container for dietary restrictions --}}
+{{!-- Container for dietary restrictions --}}
 <div id="diet-checkboxes" class="scrollable-container1">
   <h6>Dietary Restrictions</h6>
   <input type="checkbox" id="is_vegetarian">
@@ -27,27 +35,3 @@
 </div>
 
 <script src="/js/homepage.js"></script>
-
-{{!-- Srollable Container for allergies --}}
-    {{!-- <div id="allergy-checkboxes" class="scrollable-container2">
-      <h6>Allergy Restrictions</h6>
-
-      <input type="checkbox" id="is_shellfish">
-      <label for="is_shellfish">Shellfish</label><br>
-      
-      <input type="checkbox" id="is_tree_nuts">
-      <label for="is_tree_nuts">Tree nuts</label><br>
-      
-      <input type="checkbox" id="is_dairy_free">
-      <label for="is_dairy_free">Dairy Free</label><br>
-
-      <input type="checkbox" id="is_seeds">
-      <label for="is_seeds">Seeds</label><br>
-      
-      <input type="checkbox" id="is_honey">
-      <label for="is_honey">Honey</label><br>
-      
-      <input type="checkbox" id="is_garlic_onion">
-      <label for="is_garlic_onion">Garlic/Onion<label><br>
-
-    </div> --}}

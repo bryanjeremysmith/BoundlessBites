@@ -1,14 +1,13 @@
-let vegetarian = false;
-let vegan = false;
-let glutenFree = false;
-let kosher = false;
-let halal = false;
-let lowSodium = false;
-let pescatarian = false;
+var vegetarian = false;
+var vegan = false;
+var glutenFree = false;
+var kosher = false;
+var halal = false;
+var lowSodium = false;
+var pescatarian = false;
 
-
-const isVegetarianHandler = () => {
-    const value = document.querySelector('#is_vegetarian').checked;
+function isVegetarianHandler() {
+    var value = document.querySelector('#is_vegetarian').checked;
     if (value) {
         vegetarian = true;
     }
@@ -17,8 +16,8 @@ const isVegetarianHandler = () => {
     }
 }
 
-const isVeganHandler = () => {
-    const value = document.querySelector('#is_vegan').checked;
+function isVeganHandler() {
+    var value = document.querySelector('#is_vegan').checked;
     if (value) {
         vegan = true;
     }
@@ -27,8 +26,8 @@ const isVeganHandler = () => {
     }
 }
 
-const isGfHandler = () => {
-    const value = document.querySelector('#is_gluten_free').checked;
+function isGfHandler() {
+    var value = document.querySelector('#is_gluten_free').checked;
     if (value) {
         glutenFree = true;
     }
@@ -37,8 +36,8 @@ const isGfHandler = () => {
     }
 }
 
-const isKosherHandler = () => {
-    const value = document.querySelector('#is_kosher').checked;
+function isKosherHandler() {
+    var value = document.querySelector('#is_kosher').checked;
     if (value) {
         kosher = true;
     }
@@ -47,8 +46,8 @@ const isKosherHandler = () => {
     }
 }
 
-const isHalalHandler = () => {
-    const value = document.querySelector('#is_halal').checked;
+function isHalalHandler() {
+    var value = document.querySelector('#is_halal').checked;
     if (value) {
         halal = true;
     }
@@ -57,8 +56,8 @@ const isHalalHandler = () => {
     }
 }
 
-const isLowSodiumHandler = () => {
-    const value = document.querySelector('#is_lowsodium').checked;
+function isLowSodiumHandler() {
+    var value = document.querySelector('#is_lowsodium').checked;
     if (value) {
         lowSodium = true;
     }
@@ -67,8 +66,8 @@ const isLowSodiumHandler = () => {
     }
 }
 
-const isPescatarianHandler = () => {
-    const value = document.querySelector('#is_pescatarian').checked;
+function isPescatarianHandler() {
+    var value = document.querySelector('#is_pescatarian').checked;
     if (value) {
         pescatarian = true;
     }
