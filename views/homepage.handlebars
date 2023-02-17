@@ -1,53 +1,84 @@
-
-
-    {{!-- Srollable Container for dietary restrictions --}}
+{{!-- Container for dietary restrictions --}}
 <div id="diet-checkboxes" class="scrollable-container1">
   <h6>Dietary Restrictions</h6>
-  <input type="checkbox" id="is_vegetarian">
+  <input type="checkbox" id="is_vegetarian" checked>
   <label for="is_vegetarian">Vegetarian</label><br>
   
-  <input type="checkbox" id="is_vegan">
+  <input type="checkbox" id="is_vegan" checked>
   <label for="is_vegan">Vegan</label><br>
   
-  <input type="checkbox" id="is_gluten_free">
-  <label for="is_gluten_free">Gluten-Free</label><br>
+  <input type="checkbox" id="is_gluten_free" checked>
+  <label for="is_gluten_free">Gluten Free</label><br>
   
-  <input type="checkbox" id="is_kosher">
+  {{!-- <input type="checkbox" id="is_kosher" checked>
   <label for="is_kosher">Kosher</label><br>
   
-  <input type="checkbox" id="is_halal">
+  <input type="checkbox" id="is_halal" checked>
   <label for="is_halal">Halal</label><br>
   
-  <input type="checkbox" id="is_lowsodium">
+  <input type="checkbox" id="is_lowsodium" checked>
   <label for="is_lowsodium">Low Sodium</label><br>
   
-  <input type="checkbox" id="is_pescatarian">
-  <label for="is_pescatarian">Pescatarian</label><br>
-
+  <input type="checkbox" id="is_pescatarian" checked>
+  <label for="is_pescatarian">Pescatarian</label><br> --}}
 </div>
 
+{{#each restaurants as |restaurant| }}
+  {{#if restaurant.is_vegetarian  }} 
+    {{#if restaurant.is_vegan}}
+      {{#if restaurant.is_gluten_free}}
+        <div id="vegetarian_vegan_gluten_free" class="vegetarian_vegan_gluten_free_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegetarian, Vegan, Gluten Free</p>
+        </div>
+      {{else}}
+        <div id="vegetarian_vegan" class="vegetarian_vegan_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegetarian, Vegan</p>
+        </div>
+      {{/if}}
+    {{else}}
+      {{#if restaurant.is_gluten_free}}
+        <div id="vegetarian_gluten_free" class="vegetarian_gluten_free_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegetarian, Gluten Free</p>
+        </div>
+      {{else}}
+        <div id="vegetarian" class="vegetarian_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegetarian</p>
+        </div>
+      {{/if}}
+    {{/if}}
+  {{else}}
+    {{#if restaurant.is_vegan}}
+      {{#if restaurant.is_gluten_free}}
+        <div id="vegan_gluten_free" class="vegan_gluten_free_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegan, Gluten Free</p>
+        </div>
+      {{else}}
+        <div id="vegan" class="vegan_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegan</p>
+        </div>
+      {{/if}}
+    {{else}}
+      {{#if restaurant.is_gluten_free}}
+        <div id="gluten_free" class="gluten_free_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Gluten Free</p>
+        </div>
+      {{else}}
+        <div class="card">
+          <h2>No restaurants</a></h2>
+          <p>Nothing matches this filter</p>
+        </div>
+      {{/if}}
+    {{/if}}
+  {{/if}}
+{{/each}}
+
+
+
 <script src="/js/homepage.js"></script>
-
-{{!-- Srollable Container for allergies --}}
-    {{!-- <div id="allergy-checkboxes" class="scrollable-container2">
-      <h6>Allergy Restrictions</h6>
-
-      <input type="checkbox" id="is_shellfish">
-      <label for="is_shellfish">Shellfish</label><br>
-      
-      <input type="checkbox" id="is_tree_nuts">
-      <label for="is_tree_nuts">Tree nuts</label><br>
-      
-      <input type="checkbox" id="is_dairy_free">
-      <label for="is_dairy_free">Dairy Free</label><br>
-
-      <input type="checkbox" id="is_seeds">
-      <label for="is_seeds">Seeds</label><br>
-      
-      <input type="checkbox" id="is_honey">
-      <label for="is_honey">Honey</label><br>
-      
-      <input type="checkbox" id="is_garlic_onion">
-      <label for="is_garlic_onion">Garlic/Onion<label><br>
-
-    </div> --}}
