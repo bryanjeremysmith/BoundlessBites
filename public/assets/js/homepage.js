@@ -10,31 +10,31 @@ var glutenFree = true;
 function collapseAll(){
     var elements = document.getElementsByClassName('vegetarian_vegan_gluten_free_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
     elements = document.getElementsByClassName('vegetarian_gluten_free_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
     elements = document.getElementsByClassName('vegan_gluten_free_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
     elements = document.getElementsByClassName('vegetarian_vegan_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
     elements = document.getElementsByClassName('vegetarian_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
     elements = document.getElementsByClassName('vegan_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
     elements = document.getElementsByClassName('gluten_free_class');
     for (let index = 0; index < elements.length; index++) {
-        elements[index].setAttribute('style', 'visibility:collapse');
+        elements[index].setAttribute('style', 'display:none');
     }
 }
 function dietaryCheckBoxClick(){
