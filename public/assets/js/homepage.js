@@ -70,3 +70,5 @@ function dietaryCheckBoxClick(){
 document.querySelector('#is_vegetarian').addEventListener('click', dietaryCheckBoxClick);
 document.querySelector('#is_vegan').addEventListener('click', dietaryCheckBoxClick);
 document.querySelector('#is_gluten_free').addEventListener('click', dietaryCheckBoxClick);
+
+dietaryCheckBoxClick()
