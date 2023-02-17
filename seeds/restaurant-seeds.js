@@ -5,7 +5,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Bob\'s Red Mill',
-        image_src: "/images/BobsRedMill.jpg",
+        image_src: "/Images/BobsRedMill.jpg",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
@@ -17,7 +17,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'New Cascadia Traditional',
-        image_src: "/images/New-cascadia-traditional.webp",
+        image_src: "/Images/New-cascadia-traditional.webp",
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
@@ -29,7 +29,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Petunia\'s Bakery',
-        image_src: "/images/Petunias.jpeg",
+        image_src: "/Images/Petunias.jpeg",
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
@@ -41,7 +41,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Off The Griddle',
-        image_src: "/images/offthegriddle.jpg",
+        image_src: "/Images/offthegriddle.jpg",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: false,
@@ -53,7 +53,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Dirty Lettuce',
-        image_src: "/images/Dirty_Lettuce_logo.png",
+        image_src: "/Images/Dirty_Lettuce_logo.png",
         is_vegetarian: true, 
         is_vegan: true,
         is_gluten_free: false,
@@ -65,7 +65,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Jam on Hawthorne',
-        image_src: "/images/Jam_on_Hawthorne_logo.png",
+        image_src: "/Images/Jam_on_Hawthorne_logo.png",
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
@@ -77,7 +77,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Harlow',
-        image_src: "/images/logo_harlow.png",
+        image_src: "/Images/logo_harlow.png",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
@@ -89,7 +89,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'The Screen Door',
-        image_src: "/images/Screen-Door-Pearl-patio.jpg",
+        image_src: "/Images/Screen-Door-Pearl-patio.jpg",
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
@@ -101,7 +101,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Urdaneta',
-        image_src: "/images/urdaneta.png",
+        image_src: "/Images/urdaneta.png",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
@@ -113,7 +113,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Christina\'s Cartel',
-        image_src: "/images/christinasCartel.jpeg",
+        image_src: "/Images/christinasCartel.jpeg",
         is_vegetarian: false,
         is_vegan: false,
         is_gluten_free: true,
@@ -125,7 +125,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Applebee\'s',
-        image_src: "/images/applebees.jpeg",
+        image_src: "/Images/applebees.jpeg",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
@@ -137,7 +137,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Red Robin',
-        image_src: "/images/red-robin.jpg",
+        image_src: "/Images/red-robin.jpg",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: true,
@@ -149,7 +149,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Olive Garden',
-        image_src: "/images/OliveGarden.webp",
+        image_src: "/Images/OliveGarden.webp",
         is_vegetarian: true,
         is_vegan: true,
         is_gluten_free: false,
@@ -161,7 +161,7 @@ const restaurantData = [
 
     {
         restaurant_name: 'Shari\'s',
-        image_src: "/images/Shari's.avif",
+        image_src: "/Images/Shari's.avif",
         is_vegetarian: true,
         is_vegan: false,
         is_gluten_free: false,
