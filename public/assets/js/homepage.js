@@ -8,31 +8,32 @@ var pescatarian = false;
 
 function isVegetarianHandler() {
     var value = document.querySelector('#is_vegetarian').checked;
+    console.log(value);
     if (value) {
-        vegetarian = true;
+        document.getElementById('vegetarian').setAttribute('style', 'visibility:visible');
     }
     else {
-        vegetarian = false;
+        document.getElementById('vegetarian').setAttribute('style', 'visibility:collapse');
     }
 }
 
 function isVeganHandler() {
     var value = document.querySelector('#is_vegan').checked;
     if (value) {
-        vegan = true;
+        vegan = 'visibile';
     }
     else {
-        vegan = false;
+        vegan = 'collapse';
     }
 }
 
 function isGfHandler() {
     var value = document.querySelector('#is_gluten_free').checked;
     if (value) {
-        glutenFree = true;
+        glutenFree = 'visibile';
     }
     else {
-        glutenFree = false;
+        glutenFree = 'collapse';
     }
 }
 
