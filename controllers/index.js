@@ -5,7 +5,7 @@ const homeRoutes = require('./htmlRoutes');
 const restaurantRoutes = require('./restaurantRoutes');
 
 router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
+//router.use('/api', apiRoutes);
 router.use('/restaurant', restaurantRoutes);
 
 
