@@ -19,14 +19,7 @@ body {
   background-color: var(--quatrinary);
 }
 
-.card {
-    display: inline-block;
-    width: 200px;
-    height: 300px;
-    margin: 10px;
-    border: 1px solid black;
-    overflow: hidden;
-  }
+
 
 .card-image {
   width: 100%;
@@ -157,11 +150,14 @@ ul {
   /* CARDS */
   .card {
     margin: 20px;
+    padding: 10px;
     flex: 0 1 300px;
-    border: 7px double var(--dark);
     border-radius: 10px;
     background-color: var(--light);
     color: var(--dark);
+    display: inline-block;
+    border: 1px solid black;
+    overflow: hidden;
   }
   
   .login-card {
@@ -214,38 +210,33 @@ ul {
 
 
   /*DISCLAIMER*/
-  #disclaimer {
-    font-family: 'Oswald', sans-serif;
-    color: var(--secondary);
-    flex: 4;
-    background-color: var(--primary);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
   #disclaimer-container {
-    background-color: var(--primary);
+    background-color: #577a7c;
     font-family: 'Oswald', sans-serif;
-    color: var(--secondary);
+    color: #e3e4e3;
+    flex: 4;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: double;
+    border-width: thick;
 }
 
-p {
-  font-size: 36px;
+.disclaimer-paragraph {
+  font-size: 28px;
 }
+ 
   
 
 /* scrollbar styling */
   .scrollable-container1 {
-    height: 200px;
-    width: 200px;
-    overflow-y: scroll;
+    margin: 20px;
+    padding: 10px;
     border: 1px solid black;
-    margin-left: auto;
     flex-direction: column;
     display: flex;
     display: inline-block;
