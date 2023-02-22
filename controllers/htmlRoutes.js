@@ -2,7 +2,8 @@ const express = require("express");
 const Restaurant = require("../models/Restaurant");
 const User = require("../models/User")
 const router = express.Router();
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const cookieParser = require('cookie-parser');
 
 router.get('/', async (req, res) => {
   try {
@@ -84,6 +85,7 @@ router.post('/api/users/login', async (req, res) => {
 
       res.render("homepage", { layout: "main", logged_in : req.session.logged_in});
     });
+    console.log(req.cookies);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

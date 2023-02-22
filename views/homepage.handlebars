@@ -77,6 +77,19 @@
       {{/if}}
     {{/if}}
   {{/if}}
+  {{#if restaurant.is_vegan}}
+      {{#if restaurant.is_gluten_free}}
+        <div id="vegan_gluten_free" class="vegan_gluten_free_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegan, Gluten Free</p>
+        </div>
+      {{else}}
+        <div id="vegan" class="vegan_class card">
+          <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
+          <p>Vegan</p>
+        </div>
+      {{/if}}
+    {{/if}}
 {{/each}}
 
 
