@@ -2,9 +2,8 @@
 
 ## Description
 
-This project is a food blog where people with restrictive diets (vegan, gluten free, low fodmap etc) can post about a 
-restaurant and what they were able to eat there, and if they were responsible with minding allergies. Posts can be 
-filtered by diet type or allergy.
+This project is a food blog where people with restrictive diets (vegetarian, vegan, gluten free) can read about restaurants
+that support their diets.  Restaurants can be filtered by diet type.
 
 ## Table of Contents
 
@@ -17,25 +16,11 @@ filtered by diet type or allergy.
 
 ## Installation
 
-git clone https://github.com/bryanjeremysmith/BoundlessBites
+Boundless Bites is deployed to https://boundlessbites.herokuapp.com/
 
 ## Usage
 
-<pre>npm i</pre>
-
-Using a local database, employee_db, with password 'password1234':
-
-<pre>mysql -u root -p</pre>
-
-Enter password of 'password1234'
-
-<pre>SOURCE db\schema.sql</pre>
-<pre>SOURCE db\seeds.sql</pre>
-<pre>exit</pre>
-
-Then run:
-
-<pre>node server.js</pre>
+Go to https://boundlessbites.herokuapp.com/ in your web browser.
 
 ## License 
 
