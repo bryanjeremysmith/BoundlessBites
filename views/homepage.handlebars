@@ -1,50 +1,38 @@
 {{!-- Container for dietary restrictions --}}
 <div id="diet-checkboxes" class="scrollable-container1">
   <h6>Dietary Restrictions</h6>
-  <input type="checkbox" id="is_vegetarian" checked>
+  <input type="checkbox" id="is_vegetarian">
   <label for="is_vegetarian">Vegetarian</label><br>
   
-  <input type="checkbox" id="is_vegan" checked>
+  <input type="checkbox" id="is_vegan">
   <label for="is_vegan">Vegan</label><br>
   
-  <input type="checkbox" id="is_gluten_free" checked>
+  <input type="checkbox" id="is_gluten_free">
   <label for="is_gluten_free">Gluten Free</label><br>
-  
-  {{!-- <input type="checkbox" id="is_kosher" checked>
-  <label for="is_kosher">Kosher</label><br>
-  
-  <input type="checkbox" id="is_halal" checked>
-  <label for="is_halal">Halal</label><br>
-  
-  <input type="checkbox" id="is_lowsodium" checked>
-  <label for="is_lowsodium">Low Sodium</label><br>
-  
-  <input type="checkbox" id="is_pescatarian" checked>
-  <label for="is_pescatarian">Pescatarian</label><br> --}}
 </div>
 
 {{#each restaurants as |restaurant| }}
   {{#if restaurant.is_vegetarian  }} 
     {{#if restaurant.is_vegan}}
       {{#if restaurant.is_gluten_free}}
-        <div id="vegetarian_vegan_gluten_free" class="vegetarian_vegan_gluten_free_class card">
+        <div class="vegetarian_vegan_gluten_free_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Vegetarian, Vegan, Gluten Free</p>
         </div>
       {{else}}
-        <div id="vegetarian_vegan" class="vegetarian_vegan_class card">
+        <div class="vegetarian_vegan_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Vegetarian, Vegan</p>
         </div>
       {{/if}}
     {{else}}
       {{#if restaurant.is_gluten_free}}
-        <div id="vegetarian_gluten_free" class="vegetarian_gluten_free_class card">
+        <div class="vegetarian_gluten_free_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Vegetarian, Gluten Free</p>
         </div>
       {{else}}
-        <div id="vegetarian" class="vegetarian_class card">
+        <div class="vegetarian_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Vegetarian</p>
         </div>
@@ -53,19 +41,19 @@
   {{else}}
     {{#if restaurant.is_vegan}}
       {{#if restaurant.is_gluten_free}}
-        <div id="vegan_gluten_free" class="vegan_gluten_free_class card">
+        <div class="vegan_gluten_free_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Vegan, Gluten Free</p>
         </div>
       {{else}}
-        <div id="vegan" class="vegan_class card">
+        <div class="vegan_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Vegan</p>
         </div>
       {{/if}}
     {{else}}
       {{#if restaurant.is_gluten_free}}
-        <div id="gluten_free" class="gluten_free_class card">
+        <div class="gluten_free_class card">
           <h2><a href="/restaurant/{{restaurant.id}}">{{restaurant.restaurant_name}}</a></h2>
           <p>Gluten Free</p>
         </div>
