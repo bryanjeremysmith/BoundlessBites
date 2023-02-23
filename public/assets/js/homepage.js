@@ -79,25 +79,13 @@ function dietaryCheckBoxClick(){
         //3
         elements = document.getElementsByClassName('vegetarian_gluten_free_class');
         SetElementsVisible(elements);
-        elements = document.getElementsByClassName('vegetarian_class');
-        SetElementsVisible(elements);
-        elements = document.getElementsByClassName('gluten_free_class');
-        SetElementsVisible(elements);
     }else if(vegan && glutenFree){
         //3
         elements = document.getElementsByClassName('vegan_gluten_free_class');
         SetElementsVisible(elements);
-        elements = document.getElementsByClassName('vegan_class');
-        SetElementsVisible(elements);
-        elements = document.getElementsByClassName('gluten_free_class');
-        SetElementsVisible(elements);
     }else if(vegetarian && vegan){
         //3
         elements = document.getElementsByClassName('vegetarian_vegan_class');
-        SetElementsVisible(elements);
-        elements = document.getElementsByClassName('vegetarian_class');
-        SetElementsVisible(elements);
-        elements = document.getElementsByClassName('vegan_class');
         SetElementsVisible(elements);
     }else if(vegetarian){
         //4
