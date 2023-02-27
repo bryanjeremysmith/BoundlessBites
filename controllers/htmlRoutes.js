@@ -1,10 +1,11 @@
 const express = require("express");
 const Restaurant = require("../models/Restaurant");
 const User = require("../models/User")
+const withAuth = require('../utils/auth');
 const router = express.Router();
 const bcrypt = require('bcrypt')
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const restaurantData = await Restaurant.findAll()
     const restaurants = restaurantData.map((project) => project.get({ plain: true}));
